@@ -16,7 +16,6 @@ public class JobApplication extends BaseModel{
     private String candidateEmail;
 
     @NotEmpty
-    @Email
     @Column(name = "candidate_name", nullable = false)
     private String candidateName;
 
@@ -25,8 +24,10 @@ public class JobApplication extends BaseModel{
     private JobPost jobPost;
 
     @Column(name = "active")
-    private boolean active;
+    private boolean active = true;
 
-    @Column(name = "salary_range")
-    private String salaryRange;
+    @NotEmpty
+    @Column(name = "resume_link", nullable = false)
+    private String resumeLink;
+
 }

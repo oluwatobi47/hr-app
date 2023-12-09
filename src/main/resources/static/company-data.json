@@ -1,0 +1,83 @@
+{
+  "company": {
+    "id": "845bfe0e-538d-4c38-897e-3b30b0d3458b",
+    "name": "Company One",
+    "date_founded": "1998-09-04",
+    "mission_statement": "To organize the world's information and make it universally accessible and useful",
+    "vision": "To provide access to the world's information in one click",
+    "company_culture_statement": "A problem isn't truly solved until it's solved for all. Googlers build products that help create opportunities for everyone, whether down the street or across the globe. Bring your insight, imagination and a healthy disregard for the impossible. Bring everything that makes you unique. Together, we can build for everyone",
+    "address": "Mountain View, California, USA"
+  },
+  "job_descriptions": [
+    {
+      "id": "9e1bfa0b6b5548e29e0ca71e29a0cee2",
+      "company_id": "845bfe0e-538d-4c38-897e-3b30b0d3458b",
+      "job_title": "Java Developer",
+      "job_description_file": "/content/drive/MyDrive/LLM_Training/dataset/job_description/test_case_1/java_developer.docx"
+    },
+    {
+      "id": "4f3d4751021a403b9a0f4146f8384f64",
+      "company_id": "845bfe0e-538d-4c38-897e-3b30b0d3458b",
+      "job_title": "Senior Devops Engineer",
+      "job_description_file": "/content/drive/MyDrive/LLM_Training/dataset/job_description/test_case_1/senior_devops_engineer.docx"
+    },
+    {
+      "id": "2dce80e48d3b424eb2e77820b11d9d2c",
+      "company_id": "845bfe0e-538d-4c38-897e-3b30b0d3458b",
+      "job_title": "Senior Management Consultant",
+      "job_description_file": "/content/drive/MyDrive/LLM_Training/dataset/job_description/test_case_1/senior_management_accountant.docx"
+    }
+  ],
+  "job_posts": [
+    {
+      "id": 0,
+      "created_date": "2023-02-27",
+      "title": "Java Developer",
+      "job_description_id": "9e1bfa0b6b5548e29e0ca71e29a0cee2",
+      "active": true,
+      "salary_range": "$140,000+"
+    },
+    {
+      "id": 1,
+      "created_date": "2023-01-11",
+      "title": "Senior Devops Engineer",
+      "job_description_id": "4f3d4751021a403b9a0f4146f8384f64",
+      "active": true,
+      "salary_range": "$100,000 - $120,000"
+    },
+    {
+      "id": 2,
+      "created_date": "2023-04-17",
+      "title": "Senior Management Consultant",
+      "job_description_id": "2dce80e48d3b424eb2e77820b11d9d2c",
+      "active": true,
+      "salary_range": "$80,000 - $100,000"
+    }
+  ],
+  "job_applications": [
+    {
+      "id": "e43c9ef7119b4df09442c838a4dc960c",
+      "candidate_name": "David Doe",
+      "candidate_email": "candidate_0@test.com",
+      "created_date": "2023-10-23",
+      "job_post_id": 0,
+      "resume_link": "/content/drive/MyDrive/LLM_Training/dataset/resume/test_case_1/accountant_1.pdf"
+    },
+    {
+      "id": "b7dddbbd118643ec8da362c5c5cc4b89",
+      "candidate_name": "John Black",
+      "candidate_email": "candidate_1@test.com",
+      "created_date": "2023-05-07",
+      "job_post_id": 1,
+      "resume_link": "/content/drive/MyDrive/LLM_Training/dataset/resume/test_case_1/it_professional_1.pdf"
+    },
+    {
+      "id": "7fb4edb9a7a0483f96b8c329b2bee070",
+      "candidate_name": "Oluwatobi Alao",
+      "candidate_email": "candidate_2@test.com",
+      "created_date": "2023-08-22",
+      "job_post_id": 2,
+      "resume_link": "/content/drive/MyDrive/LLM_Training/dataset/resume/test_case_1/oluwatobi_alao.pdf"
+    }
+  ]
+}

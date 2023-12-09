@@ -1,22 +1,18 @@
 package uk.ac.bcu.oluwatobi.hrapp.controller;
 
-
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import uk.ac.bcu.oluwatobi.hrapp.dto.DataResponse;
 import uk.ac.bcu.oluwatobi.hrapp.dto.IDataResponse;
 import uk.ac.bcu.oluwatobi.hrapp.dto.JobDescriptionDTO;
+import uk.ac.bcu.oluwatobi.hrapp.dto.JobPostDTO;
 import uk.ac.bcu.oluwatobi.hrapp.service.JobService;
 
 import java.util.List;
 
-@RestController("/job-description")
+@RestController
+@RequestMapping("/job-description")
 public class JobDescriptionController {
-
     private final JobService jobService;
-
 
     public JobDescriptionController(JobService jobService) {
         this.jobService = jobService;

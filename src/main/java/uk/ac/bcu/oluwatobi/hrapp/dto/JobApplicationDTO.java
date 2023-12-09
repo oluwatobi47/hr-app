@@ -15,9 +15,9 @@ public class JobApplicationDTO implements Serializable {
 
     private String id;
 
-    @JsonProperty("candidate_email")
     @NotEmpty
     @Email
+    @JsonProperty("candidate_email")
     private String candidateEmail;
 
     @NotEmpty
@@ -34,10 +34,11 @@ public class JobApplicationDTO implements Serializable {
     @JsonProperty(value = "active")
     private boolean active = true;
 
-    @JsonProperty("salary_range")
-    private String salaryRange;
-
     @JsonProperty("created_date")
     private Date createdDate;
+
+    @NotEmpty
+    @JsonProperty("resume_link")
+    private String resumeLink;
 
 }

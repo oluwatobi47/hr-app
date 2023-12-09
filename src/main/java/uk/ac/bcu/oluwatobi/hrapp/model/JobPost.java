@@ -6,6 +6,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 
 @Entity
 @Data
@@ -16,11 +18,12 @@ public class JobPost extends BaseModel{
     private String title;
 
     @ManyToOne
-    @JoinColumn(name = "job_description_id")
+    @NotFound(action = NotFoundAction.EXCEPTION)
+    @JoinColumn(name = "job_description_id", nullable = false)
     private JobDescription jobDescription;
 
     @Column(name = "active")
-    private Boolean active;
+    private boolean active = true;
 
     @Column(name = "salary_range")
     private String salaryRange;
