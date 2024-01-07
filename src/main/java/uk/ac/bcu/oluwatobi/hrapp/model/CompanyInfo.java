@@ -17,12 +17,14 @@ public class CompanyInfo extends BaseModel {
     private String address;
 
     @Column(name = "date_founded")
+    @JsonProperty("date_founded")
     private Date dateFounded;
 
     @Column(nullable = false, unique = true)
     private String name;
 
     @Column(name = "mission_statement")
+    @JsonProperty("mission_statement")
     private String missionStatement;
 
     @Column(name = "company_culture_statement")
