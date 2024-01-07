@@ -64,20 +64,20 @@ public class JobService {
     }
 
     public void saveJobApplication(JobApplicationDTO dto) throws DataValidationException {
-//        var postRef = jobPostRepository.findById(dto.getJobPostID());
-//        if(postRef.isEmpty()) {
-//            throw new DataValidationException("Job post with specified value does not exist!");
-//        }
-//        var jobApp = new JobApplication();
-//        var date = dto.getCreatedDate() != null ? dto.getCreatedDate() : new Date();
-//        jobApp.setCandidateEmail(dto.getCandidateEmail());
-//        jobApp.setCandidateName(dto.getCandidateName());
-//        jobApp.setResumeLink(dto.getResumeLink());
-//        jobApp.setJobPost(postRef.get());
-//        jobApp.setCreatedDate(date);
-//        var saved = jobApplicationRepository.save(jobApp);
+        var postRef = jobPostRepository.findById(dto.getJobPostID());
+        if(postRef.isEmpty()) {
+            throw new DataValidationException("Job post with specified value does not exist!");
+        }
+        var jobApp = new JobApplication();
+        var date = dto.getCreatedDate() != null ? dto.getCreatedDate() : new Date();
+        jobApp.setCandidateEmail(dto.getCandidateEmail());
+        jobApp.setCandidateName(dto.getCandidateName());
+        jobApp.setResumeLink(dto.getResumeLink());
+        jobApp.setJobPost(postRef.get());
+        jobApp.setCreatedDate(date);
+        var saved = jobApplicationRepository.save(jobApp);
         try {
-            pipelineService.sendData(dto, PipelineModelType.JOB_APPLICATION);
+            pipelineService.sendData(mapJobApplicationToDTO(saved), PipelineModelType.JOB_APPLICATION);
         } catch (Exception e) {
             e.printStackTrace();
         }
